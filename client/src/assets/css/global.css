@@ -1,0 +1,213 @@
+.bg-starfield {
+    /* Deep space: blue to purple vertical and radial gradient for "glow" */
+    background:
+      radial-gradient(ellipse 60% 35% at 50% 0%, #ff3a8533 0%, #1b103a 50%, transparent 85%),
+      linear-gradient(180deg, #181032 0%, #22134a 60%, #112850 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Stars background (multi-layer + twinkling + moving) */
+  .bg-starfield::before,
+  .bg-starfield::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-repeat: repeat;
+  }
+  
+  .bg-starfield::before {
+    /* Far, faint stars: lots of tiny white-blue dots */
+    background-image:
+      radial-gradient(circle, #fff 1.2px, transparent 1.7px),
+      radial-gradient(circle, #80c6ff 0.7px, transparent 1.3px),
+      radial-gradient(circle, #a3caff 0.8px, transparent 1.4px);
+    background-size: 120px 200px, 200px 250px, 180px 160px;
+    background-position: 0 0, 80px 60px, 40px 120px;
+    opacity: 0.7;
+    animation: 
+      twinkleStars1 8s linear infinite,
+      moveStars1 120s linear infinite;
+  }
+  
+  .bg-starfield::after {
+    /* Closer, larger, more "twinkle" star overlay */
+    background-image:
+      radial-gradient(circle, #fff 2.3px, transparent 2.8px),
+      radial-gradient(circle, #80c6ff 1.5px, transparent 2.1px),
+      radial-gradient(circle, #bae4ff 1.1px, transparent 1.8px);
+    background-size: 240px 300px, 380px 300px, 500px 390px;
+    background-position: 66px 10px, 150px 180px, 300px 90px;
+    opacity: 0.9;
+    animation: 
+      twinkleStars2 13s linear infinite,
+      moveStars2 150s linear infinite;
+  }
+  
+  /* Moving moon using a dedicated element */
+  .bg-starfield .moon {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background:
+      radial-gradient(circle at 55% 55%, #ffffffe0 60%, #ffe9fc80 88%, #ff7ae7 100%, transparent 110%);
+    border-radius: 50%;
+    box-shadow:
+      0 0 40px 20px #ffe9fc80,
+      0 0 90px 36px #ae51f095,
+      0 0 120px 70px #ff7ae750;
+    opacity: 0.93;
+    z-index: 2;
+    pointer-events: none;
+    animation: 
+      moonGlow 8s ease-in-out infinite alternate,
+      moonOrbit 240s linear infinite;
+  }
+  
+  /* Alternative: Pure CSS moon using data attribute */
+  .bg-starfield[data-moon]::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background:
+      radial-gradient(circle at 55% 55%, #ffffffe0 60%, #ffe9fc80 88%, #ff7ae7 100%, transparent 110%);
+    border-radius: 50%;
+    box-shadow:
+      0 0 40px 20px #ffe9fc80,
+      0 0 90px 36px #ae51f095,
+      0 0 120px 70px #ff7ae750;
+    opacity: 0.93;
+    z-index: 2;
+    pointer-events: none;
+    animation: 
+      moonGlow 8s ease-in-out infinite alternate,
+      moonOrbit 240s linear infinite;
+  }
+  
+  .bg-starfield > * {
+    position: relative;
+    z-index: 3;
+  }
+  
+  /* Shooting stars (optional) */
+  .bg-starfield .shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    box-shadow: 0 0 6px 2px #fff;
+    opacity: 0;
+    animation: shootingStar 3s linear infinite;
+  }
+  
+  .bg-starfield .shooting-star::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, #fff, transparent);
+    transform: translateX(-100px);
+    opacity: 0.6;
+  }
+  
+  .bg-starfield .shooting-star:nth-child(2) {
+    animation-delay: 1.5s;
+    top: 20%;
+    left: 10%;
+  }
+  
+  .bg-starfield .shooting-star:nth-child(3) {
+    animation-delay: 3s;
+    top: 40%;
+    left: 30%;
+  }
+  
+  /* Twinkling keyframes for stars */
+  @keyframes twinkleStars1 {
+    0% { opacity: 0.65 }
+    40% { opacity: 0.72 }
+    60% { opacity: 0.60 }
+    100% { opacity: 0.67 }
+  }
+  
+  @keyframes twinkleStars2 {
+    0% { opacity: 0.85 }
+    10% { opacity: 0.80 }
+    20% { opacity: 0.94 }
+    50% { opacity: 0.95 }
+    70% { opacity: 0.88 }
+    100% { opacity: 0.91 }
+  }
+  
+  /* Moon animations */
+  @keyframes moonGlow {
+    from { filter: blur(0px) brightness(1); }
+    to { filter: blur(2px) brightness(1.1); }
+  }
+  
+  @keyframes moonOrbit {
+    0% {
+      top: 45px;
+      right: 50px;
+      transform: scale(1);
+    }
+    25% {
+      top: 50%;
+      right: 5%;
+      transform: scale(0.9);
+    }
+    50% {
+      top: 85%;
+      right: 50%;
+      transform: scale(0.8);
+    }
+    75% {
+      top: 50%;
+      right: 90%;
+      transform: scale(0.9);
+    }
+    100% {
+      top: 45px;
+      right: 50px;
+      transform: scale(1);
+    }
+  }
+  
+  /* Star movement animations */
+  @keyframes moveStars1 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      transform: translateX(-120px) translateY(-200px);
+    }
+  }
+  
+  @keyframes moveStars2 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      transform: translateX(240px) translateY(-300px);
+    }
+  }
+  
+  /* Shooting star animation */
+  @keyframes shootingStar {
+    0% {
+      opacity: 0;
+      transform: translateX(0) translateY(0) rotate(45deg);
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(300px) translateY(300px) rotate(45deg);
+    }
+  }
