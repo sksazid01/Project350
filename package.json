@@ -1,16 +1,11 @@
 {
-  "name": "projecttest",
+  "name": "sust-club",
   "version": "1.0.0",
+  "description": "SUSTclubs is a full-featured, digital platform designed to revolutionize how clubs at Shahjalal University of Science and Technology (SUST) manage their operations.",
   "main": "index.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "express": "^5.1.0"
-  }
+  "license": "ISC"
 }
