@@ -21,14 +21,14 @@ const SendMail = () => {
   // Error boundary
   if (hasError) {
     return (
-      <div className="p-4 text-red-600">
+      <div className="p-4 text-red-400 bg-gray-900 min-h-screen">
         An error occurred while loading the email form. Please try refreshing the page.
       </div>
     );
   }
   if (user.role !== 'admin' && user.role !== 'moderator') {
     return (
-      <div className="p-4 text-red-600">
+      <div className="p-4 text-red-400 bg-gray-900 min-h-screen">
         You are not authorized to access this page.
       </div>
     );
@@ -201,19 +201,19 @@ const SendMail = () => {
     }
   };
 
-  // Button styles
+  // Button styles for dark mode
   const buttonBase = 'px-4 py-2 rounded-md font-medium transition-colors';
   const buttonPrimary = 'bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50';
-  const buttonSecondary = 'bg-gray-200 text-gray-800 hover:bg-gray-300';
-  const buttonSelected = 'ring-2 ring-blue-500';
+  const buttonSecondary = 'bg-gray-700 text-gray-200 hover:bg-gray-600 border border-gray-600';
+  const buttonSelected = 'ring-2 ring-blue-400';
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-6">
+    <div className="min-h-screen bg-gray-900 p-4 md:p-6">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="bg-gray-800 rounded-lg shadow-lg border border-gray-700 p-6">
           <div className="mb-6">
-            <h1 className="text-2xl font-bold text-gray-800">Send Email</h1>
-            <p className="text-gray-600 mt-1">
+            <h1 className="text-2xl font-bold text-white">Send Email</h1>
+            <p className="text-gray-300 mt-1">
               Send emails to all users or specific club members
             </p>
           </div>
@@ -221,7 +221,7 @@ const SendMail = () => {
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             {/* Recipient Selection */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Send To</label>
+              <label className="block text-sm font-medium text-gray-200 mb-2">Send To</label>
               <div className="flex flex-col sm:flex-row gap-4 mb-4">
                 <button
                   type="button"
@@ -243,7 +243,7 @@ const SendMail = () => {
 
               {selectedOption === 'club' && (
                 <div className="mb-4">
-                  <label htmlFor="club" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="club" className="block text-sm font-medium text-gray-200 mb-1">
                     Select Club
                   </label>
                   <select
@@ -252,7 +252,7 @@ const SendMail = () => {
                     onChange={(e) => setSelectedClub(e.target.value)}
                     disabled={loading}
                     required={selectedOption === 'club'}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 focus:ring-1"
                   >
                     <option value="">Select a club</option>
                     {clubs.map((club) => (
@@ -264,9 +264,9 @@ const SendMail = () => {
                 </div>
               )}
 
-              <div className="text-sm text-gray-500">
+              <div className="text-sm text-gray-400">
                 {recipientCount > 0 ? (
-                  <div className="flex items-center text-green-600">
+                  <div className="flex items-center text-green-400">
                     <span className="mr-1">✓</span>
                     Will be sent to {recipientCount} {recipientCount === 1 ? 'recipient' : 'recipients'}
                   </div>
@@ -278,7 +278,7 @@ const SendMail = () => {
 
             {/* Subject */}
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="subject" className="block text-sm font-medium text-gray-200 mb-1">
                 Subject
               </label>
               <input
@@ -287,10 +287,10 @@ const SendMail = () => {
                 placeholder="Email subject"
                 {...register('subject', { required: 'Subject is required' })}
                 disabled={sending}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 focus:ring-1"
               />
               {errors.subject && (
-                <p className="mt-1 text-sm text-red-600">
+                <p className="mt-1 text-sm text-red-400">
                   {errors.subject.message}
                 </p>
               )}
@@ -298,7 +298,7 @@ const SendMail = () => {
 
             {/* Message */}
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-200 mb-1">
                 Message
               </label>
               <textarea
@@ -307,10 +307,10 @@ const SendMail = () => {
                 placeholder="Write your message here..."
                 {...register('message', { required: 'Message is required' })}
                 disabled={sending}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 focus:ring-1 resize-vertical"
               />
               {errors.message && (
-                <p className="mt-1 text-sm text-red-600">
+                <p className="mt-1 text-sm text-red-400">
                   {errors.message.message}
                 </p>
               )}
