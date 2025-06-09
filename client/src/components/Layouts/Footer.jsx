@@ -69,16 +69,27 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/contact-us" className="inline-block transition hover:scale-110 hover:text-secondary">
-                                    Contact Us
-                                </Link>
-                            </li>
-                            <li>
                                 <Link to="/404" className="inline-block transition hover:scale-110 hover:text-secondary">
                                     Blog
                                 </Link>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-[#FCF1F4] to-[#EDFBF9] py-5 dark:border-t-2 dark:border-white/5 dark:bg-none">
+                <div className="container">
+                    <div className="items-center justify-between text-center font-bold dark:text-white md:flex">
+                        <div>
+                            Copyright© { new Date().getFullYear() + ' ' }
+                        </div>
+                        <div>
+                            Need help? Visit the{' '}
+                            <Link to="/contact-us" className="text-secondary transition hover:text-primary">
+                                Contact Us
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
