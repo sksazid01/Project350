@@ -24,6 +24,7 @@ const LoginCover = () => {
   const { loading, error } = useSelector((state) => state.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const API_BASE = import.meta.env.VITE_API_BASE;
   
   useEffect(() => {
     dispatch(setPageTitle('SUSTclubs Admin Login'));
@@ -65,7 +66,7 @@ const LoginCover = () => {
 
     try {
       dispatch(signInStart());
-      const res = await axios.post(`/api/auth/login`, {
+      const res = await axios.post(`${API_BASE}/auth/login`, {
         email: formData.email,
         password: formData.password,
       }, { withCredentials: true });
