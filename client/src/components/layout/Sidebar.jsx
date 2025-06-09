@@ -223,11 +223,6 @@ const Sidebar = () => {
                                                 {t('Change Password')}
                                             </NavLink>
                                         </li>
-                                        <li>
-                                            <NavLink to="" target="">
-                                                {t('2FA')}
-                                            </NavLink>
-                                        </li>
                                     </ul>
                                 </AnimateHeight>
                             </li>

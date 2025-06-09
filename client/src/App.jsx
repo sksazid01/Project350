@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleRTL, toggleTheme, toggleLocale, toggleMenu, toggleLayout, toggleAnimation, toggleNavbar, toggleSemidark } from './redux/themeConfigSlice';
+import { toggleRTL, toggleTheme, toggleMenu, toggleLayout, toggleAnimation, toggleNavbar, toggleSemidark } from './redux/themeConfigSlice';
 import { store } from '/src/redux/store.js';
 import { loadUserFromLocalStorage } from './redux/user/userActions';
 
@@ -58,9 +58,9 @@ function App({ children }) {
         dispatch(toggleRTL(localStorage.getItem('rtlClass') || themeConfig.rtlClass));
         dispatch(toggleAnimation(localStorage.getItem('animation') || themeConfig.animation));
         dispatch(toggleNavbar(localStorage.getItem('navbar') || themeConfig.navbar));
-        dispatch(toggleLocale(localStorage.getItem('i18nextLng') || themeConfig.locale));
+        
         dispatch(toggleSemidark(localStorage.getItem('semidark') || themeConfig.semidark));
-    }, [dispatch, themeConfig.theme, themeConfig.menu, themeConfig.layout, themeConfig.rtlClass, themeConfig.animation, themeConfig.navbar, themeConfig.locale, themeConfig.semidark]);
+    }, [dispatch, themeConfig.theme, themeConfig.menu, themeConfig.layout, themeConfig.rtlClass, themeConfig.animation, themeConfig.navbar, themeConfig.semidark]);
 
     return (
         <div

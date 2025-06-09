@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import i18next from 'i18next';
 import themeConfig from '../theme.config';
 
 const defaultState = {
@@ -13,24 +12,6 @@ const defaultState = {
     navbar: 'navbar-sticky',
     locale: 'en',
     sidebar: false,
-    pageTitle: '',
-    languageList: [
-        { code: 'zh', name: 'Chinese' },
-        { code: 'da', name: 'Danish' },
-        { code: 'en', name: 'English' },
-        { code: 'fr', name: 'French' },
-        { code: 'de', name: 'German' },
-        { code: 'el', name: 'Greek' },
-        { code: 'hu', name: 'Hungarian' },
-        { code: 'it', name: 'Italian' },
-        { code: 'ja', name: 'Japanese' },
-        { code: 'pl', name: 'Polish' },
-        { code: 'pt', name: 'Portuguese' },
-        { code: 'ru', name: 'Russian' },
-        { code: 'es', name: 'Spanish' },
-        { code: 'sv', name: 'Swedish' },
-        { code: 'tr', name: 'Turkish' },
-    ],
     semidark: false,
 };
 
@@ -45,24 +26,6 @@ const initialState = {
     isDarkMode: false,
     sidebar: localStorage.getItem('sidebar') || defaultState.sidebar,
     semidark: localStorage.getItem('semidark') || themeConfig.semidark,
-    languageList: [
-        { code: 'zh', name: 'Chinese' },
-        { code: 'da', name: 'Danish' },
-        { code: 'en', name: 'English' },
-        { code: 'fr', name: 'French' },
-        { code: 'de', name: 'German' },
-        { code: 'el', name: 'Greek' },
-        { code: 'hu', name: 'Hungarian' },
-        { code: 'it', name: 'Italian' },
-        { code: 'ja', name: 'Japanese' },
-        { code: 'pl', name: 'Polish' },
-        { code: 'pt', name: 'Portuguese' },
-        { code: 'ru', name: 'Russian' },
-        { code: 'es', name: 'Spanish' },
-        { code: 'sv', name: 'Swedish' },
-        { code: 'tr', name: 'Turkish' },
-        { code: 'ae', name: 'Arabic' },
-    ],
 };
 
 const themeConfigSlice = createSlice({
@@ -124,21 +87,15 @@ const themeConfigSlice = createSlice({
             localStorage.setItem('semidark', payload);
             state.semidark = payload;
         },
-        toggleLocale(state, { payload }) {
-            payload = payload || state.locale;
-            i18next.changeLanguage(payload);
-            state.locale = payload;
-        },
         toggleSidebar(state) {
             state.sidebar = !state.sidebar;
         },
-
         setPageTitle(state, { payload }) {
             document.title = `${payload} | SUST CLUB MANAGEMENT SYSTEM`;
         },
     },
 });
 
-export const { toggleTheme, toggleMenu, toggleLayout, toggleRTL, toggleAnimation, toggleNavbar, toggleSemidark, toggleLocale, toggleSidebar, setPageTitle } = themeConfigSlice.actions;
+export const { toggleTheme, toggleMenu, toggleLayout, toggleRTL, toggleAnimation, toggleNavbar, toggleSemidark, toggleSidebar, setPageTitle } = themeConfigSlice.actions;
 
 export default themeConfigSlice.reducer;
