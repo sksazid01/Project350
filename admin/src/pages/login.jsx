@@ -73,9 +73,6 @@ const LoginCover = () => {
         throw new Error(res.data.errorMessage);
       }
       
-      // if(res.data.user.role === 'user'){
-      //   throw new Error('You are not authorized to access this page');
-      // }
       Cookies.set('accessToken', res.data.tokens.access.token,
         {
           expires: new Date(res.data.tokens.access.expires),
@@ -100,6 +97,8 @@ const LoginCover = () => {
         icon: 'error',
         title: 'Oops...',
         text: error.message,
+        background: '#1f2937',
+        color: '#fff',
       });
     }
   };
@@ -109,102 +108,109 @@ const LoginCover = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <nav className="bg-gray-800 p-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center text-white font-bold text-xl">
-          <img src="/assets/images/logo-pink.png" alt="Logo" className="w-25 h-12 mr-2" />
-          SUSTclubs
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex flex-col">
+      {/* Header */}
+      <nav className="bg-gray-900/80 backdrop-blur-md border-b border-gray-700/50 p-4 flex justify-between items-center">
+        <Link to="/" className="flex items-center text-white font-bold text-xl hover:text-blue-400 transition-colors">
+          <img src="/assets/images/logo-pink.png" alt="Logo" className="w-25 h-12 mr-3" />
+          <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            SUSTclubs
+          </span>
         </Link>
-        <ul className="flex space-x-4">
-          <li><Link to="/" className="text-white">Home</Link></li>
-          <li><Link to="/about" className="text-white">About</Link></li>
-          <li><Link to="/contact" className="text-white">Contact</Link></li>
-        </ul>
-        <div className="dropdown">
-          <Dropdown
-            offset={[0, 8]}
-            placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-            btnClassName="text-white flex items-center gap-2"
-            button={
-              <>
-                <span>{flag.toUpperCase()}</span>
-                <IconCaretDown />
-              </>
-            }
-          >
-            <ul className="p-2 text-black">
-              {themeConfig.languageList.map((item) => (
-                <li key={item.code}>
+        
+      </nav>
+
+      {/* Main Content */}
+      <main className="flex-grow flex justify-center items-center p-6">
+        <div className="w-full max-w-md">
+          {/* Login Card */}
+          <div className="bg-gray-800/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl p-8">
+            {/* Header */}
+            <div className="text-center mb-8">
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <IconLockDots className="w-10 h-10 text-white" fill={true} />
+              </div>
+              <h1 className="text-3xl font-bold text-white mb-2">Welcome Back!</h1>
+              <p className="text-gray-400">Enter your email and password to login</p>
+            </div>
+
+            {/* Form */}
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              {error && (
+                <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
+                  <p className="text-red-400 text-sm">{error}</p>
+                </div>
+              )}
+
+              {/* Email Field */}
+              <div className="space-y-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+                  Email Address
+                </label>
+                <div className="relative">
+                  <input
+                    onChange={handleChange}
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full px-4 py-3 pl-12 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
+                  />
+                  <IconMail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill={true} />
+                </div>
+              </div>
+
+              {/* Password Field */}
+              <div className="space-y-2">
+                <label htmlFor="password" className="block text-sm font-medium text-gray-300">
+                  Password
+                </label>
+                <div className="relative">
+                  <input
+                    onChange={handleChange}
+                    id="password"
+                    type={isPasswordVisible ? 'text' : 'password'}
+                    placeholder="Enter your password"
+                    className="w-full px-4 py-3 pl-12 pr-12 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
+                  />
+                  <IconLockDots className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill={true} />
                   <button
                     type="button"
-                    className={`w-full hover:text-primary ${flag === item.code ? 'text-primary' : ''}`}
-                    onClick={() => {
-                      i18next.changeLanguage(item.code);
-                      setLocale(item.code);
-                    }}
+                    onClick={togglePasswordVisibility}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors"
                   >
-                    {item.name}
+                    {isPasswordVisible ? <EyeSlashIcon className="w-5 h-5" /> : <EyeIcon className="w-5 h-5" />}
                   </button>
-                </li>
-              ))}
-            </ul>
-          </Dropdown>
-        </div>
-      </nav>
-      <main className="flex-grow flex justify-center items-center bg-gray-100 p-6">
-        <div className="w-full max-w-[440px] lg:mt-16">
-               <div className="mb-10">
-                 <h1 className="text-3xl font-extrabold uppercase !leading-snug text-grey-800 md:text-4xl text-center">Sign in</h1>
-                 <p className="text-base font-bold leading-normal text-white-dark text-center">Enter your email and password to login</p>
-               </div>
-               <form className="space-y-5 dark:text-white" onSubmit={handleSubmit}>
-                 {error && <div className="text-red-500 text-sm">{error}</div>}
-                 <div>
-                   <label htmlFor="Email">Email</label>
-                   <div className="relative text-white-dark">
-                     <input onChange={handleChange} id="email" type="email" placeholder="Enter Email" className="form-input ps-10 placeholder:text-white-dark" />
-                     <span className="absolute start-4 top-1/2 -translate-y-1/2">
-                       <IconMail fill={true} />
-                     </span>
-                   </div>
-                 </div>
-                 <div>
-                   <label htmlFor="Password">Password</label>
-                   <div className="relative text-white-dark">
-                     <input
-                      onChange={handleChange}
-                      id="password"
-                      type={isPasswordVisible ? 'text' : 'password'}
-                      placeholder="Enter Password"
-                      className="form-input ps-10 pe-10 placeholder:text-white-dark"
-                    />
-                    <span className="absolute start-4 top-1/2 -translate-y-1/2">
-                      <IconLockDots fill={true} />
-                    </span>
-                    <span className="absolute end-4 top-1/2 -translate-y-1/2 cursor-pointer" onClick={togglePasswordVisibility}>
-                      {isPasswordVisible ? <EyeSlashIcon className="h-5 w-5" /> : <EyeIcon className="h-5 w-5" />}
-                    </span>
-                  </div>
                 </div>
-                
-                <button 
-                  disabled={loading} 
-                  type="submit" 
-                  className="btn btn-gradient !mt-6 w-full border-0 uppercase shadow-[0_10px_20px_-10px_rgba(118, 181, 197, 0.44)]"
-                  style={{ background: 'linear-gradient(135deg, rgba(30, 129, 176, 1) 0%, rgba(118, 181, 197, 1) 100%)' }}
-                  >
-                  {loading ? 'Loading...' : 'Sign In'}
-                </button>
-              </form>
-            </div>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                disabled={loading}
+                type="submit"
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500/50 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
+              >
+                {loading ? (
+                  <div className="flex items-center justify-center">
+                    <div className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin mr-2"></div>
+                    Signing in...
+                  </div>
+                ) : (
+                  'Sign In'
+                )}
+              </button>
+            </form>
+          </div>
+        </div>
       </main>
-      <footer className="bg-gray-800 text-white p-4 text-center">
-        © {new Date().getFullYear()} SUSTclubs. All Rights Reserved.
+
+      {/* Footer */}
+      <footer className="bg-gray-900/80 backdrop-blur-md border-t border-gray-700/50 text-center py-4">
+        <p className="text-gray-400 text-sm">
+          © {new Date().getFullYear()} SUSTclubs. All Rights Reserved.
+        </p>
       </footer>
     </div>
   );
 };
-
-
 
 export default LoginCover;
