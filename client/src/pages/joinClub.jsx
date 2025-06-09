@@ -77,7 +77,7 @@ const Clubs = () => {
                     inputValue: values[currentStep],
                     showCancelButton: true,
                     currentProgressStep: currentStep,
-                    footer: currentStep === 1 ? '<a href="/faq" target="_blank">Why need to pay 100TK?</a>' : undefined,
+                    footer: currentStep === 1 ? '' : undefined,
                     customClass: 'sweet-alerts',
                     showConfirmButton: currentStep < 2 || currentStep === 2,
                     preConfirm: () => {

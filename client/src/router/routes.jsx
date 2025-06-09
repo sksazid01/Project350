@@ -12,7 +12,7 @@ const AboutUs = lazy(() => import('../pages/about-us'));
 const ContactUs = lazy(() => import('../pages/contact-us'));
 const Termsandconditions = lazy(() => import('../pages/termsConditions'));
 const PrivacyPolicy = lazy(() => import('../pages/privacyPolicy'));
-const Faq = lazy(() => import('../pages/faq'));
+
 const Test = lazy(() => import('../pages/test'));
 const Profile = lazy(() => import('../pages/profile'));
 const VerifyEmail = lazy(() => import('../pages/verify-email'));
@@ -39,7 +39,7 @@ const routes = [
   { path: '/contact-us', element: <ContactUs />, layout: 'blank' },
   { path: '/terms-conditions', element: <Termsandconditions />, layout: 'blank' },
   { path: '/privacy-policy', element: <PrivacyPolicy />, layout: 'blank' },
-  { path: '/faq', element: <Faq />, layout: 'blank' },
+  
   { path: '/test', element: <Test />, layout: 'blank' },
   { path: '/profile/:studentId', element: <Profile />, layout: 'blank'},
   { path: '/verify-email', element: <VerifyEmail />, layout: 'blank'},

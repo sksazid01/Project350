@@ -643,9 +643,6 @@ const Header = () => {
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/pages/faq">{t('faq')}</NavLink>
-                                </li>
-                                <li>
                                     <NavLink to="/pages/coming-soon-boxed" target="_blank">
                                         {t('coming_soon_boxed')}
                                     </NavLink>
