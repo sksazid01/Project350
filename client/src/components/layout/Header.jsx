@@ -185,15 +185,7 @@ const Header = () => {
                                 <ul className="!py-0 text-dark dark:text-white-dark w-[300px] sm:w-[375px] text-xs">
                                     <li className="mb-5" onClick={(e) => e.stopPropagation()}>
                                         <div className="hover:!bg-transparent overflow-hidden relative rounded-t-md p-5 text-white w-full !h-[68px]">
-                                            <div
-                                                className="absolute h-full w-full bg-no-repeat bg-center bg-cover inset-0 bg-"
-                                                style={{
-                                                    backgroundImage: `url('/assets/images/menu-heade.jpg')`,
-                                                    backgroundRepeat: 'no-repeat',
-                                                    width: '100%',
-                                                    height: '100%',
-                                                }}
-                                            ></div>
+                                           
                                             <h4 className="font-semibold relative z-10 text-lg">Messages</h4>
                                         </div>
                                     </li>
