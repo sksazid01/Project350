@@ -180,8 +180,8 @@ const Contactus = () => {
 
             <section className="bg-gradient-to-t from-white/[55%] to-transparent py-14 dark:bg-none lg:py-[100px]">
                 <div className="container flex justify-center items-center min-h-screen">
-                    <div className="relative z-10">
-                        <form action="" className="rounded-3xl bg-white px-4 py-12 dark:bg-gray-dark lg:w-2/3 lg:px-8">
+                    <div className="relative z-10 w-full max-w-3xl">
+                        <form action="" className="rounded-3xl bg-white px-4 py-12 dark:bg-gray-dark lg:px-8">
                             <div className="grid gap-10 sm:grid-cols-2">
                                 <div className="relative">
                                     <input
