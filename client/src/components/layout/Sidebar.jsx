@@ -204,26 +204,12 @@ const Sidebar = () => {
                             </li>
 
                             <li className="menu nav-item">
-                                <button type="button" className={`${currentMenu === 'auth' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('auth')}>
+                                <NavLink to="/user/change-password" className="group w-full">
                                     <div className="flex items-center">
                                         <IconMenuAuthentication className="group-hover:!text-primary shrink-0" />
-                                        <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('authentication')}</span>
+                                        <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('Change Password')}</span>
                                     </div>
-
-                                    <div className={currentMenu !== 'auth' ? 'rtl:rotate-90 -rotate-90' : ''}>
-                                        <IconCaretDown />
-                                    </div>
-                                </button>
-
-                                <AnimateHeight duration={300} height={currentMenu === 'auth' ? 'auto' : 0}>
-                                    <ul className="sub-menu text-gray-500">
-                                        <li>
-                                            <NavLink to="/user/change-password" target="">
-                                                {t('Change Password')}
-                                            </NavLink>
-                                        </li>
-                                    </ul>
-                                </AnimateHeight>
+                                </NavLink>
                             </li>
                         </ul>
                     </PerfectScrollbar>
