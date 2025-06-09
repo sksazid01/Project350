@@ -162,7 +162,7 @@ const Header = () => {
                     <div className="sm:flex-1 ltr:sm:ml-0 ltr:ml-auto sm:rtl:mr-0 rtl:mr-auto flex items-center space-x-1.5 lg:space-x-2 rtl:space-x-reverse dark:text-[#d0d2d6] justify-end">
                         <div className="horizontal-logo flex lg:hidden justify-between items-center ltr:mr-2 rtl:ml-2">
                             <Link to="/" className="main-logo flex items-center shrink-0">
-                                <img className="w-8 ltr:-ml-1 rtl:-mr-1 inline" src="/favicon.ico" alt="logo" />
+                            
                                 <span className="text-2xl ltr:ml-1.5 rtl:mr-1.5  font-semibold  align-middle hidden md:inline dark:text-white-light transition-all duration-300">SUSTclubs</span>
                             </Link>
                             <button

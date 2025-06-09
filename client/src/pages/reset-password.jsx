@@ -96,7 +96,7 @@ const RecoverIdCover = () => {
                     <div className="relative flex w-full flex-col items-center justify-center gap-6 px-4 pb-16 pt-6 sm:px-6 lg:max-w-[667px]">
                         <div className="flex w-full max-w-[440px] items-center gap-2 lg:absolute lg:end-6 lg:top-6 lg:max-w-full">
                             <Link to="/" className="w-8 block lg:hidden">
-                                <img src="/favicon.ico" alt="Logo" className="mx-auto w-10" />
+                                
                             </Link>
                         </div>
                         <div className="w-full max-w-[440px] lg:mt-16">
