@@ -201,15 +201,6 @@ const LoginCover = () => {
                 <span className="absolute inset-x-0 top-1/2 h-px w-full -translate-y-1/2 bg-white-light dark:bg-white-dark"></span>
                 <span className="inline-block bg-white px-2 align-middle text-base text-white-dark dark:bg-[#101626]">OR</span>
               </div>
-              <div className="mb-5 flex flex-col gap-y-4">
-                <button type="button" className="btn font-bold before:!w-0 dark:before:!w-0 relative !border-0 bg-[#d5d4d4] text-black dark:bg-[#1c232f] dark:text-white">
-                  <GoogleLogin
-                    onSuccess={handleGoogleSuccess}
-                    onError={handleGoogleError}
-                  />
-                </button>
-
-              </div>
               <div className="text-center dark:text-white">
                 Don't have an account ?&nbsp;
                 <Link to="/signup" className="uppercase text-primary underline transition hover:no-underline">
