@@ -1,4 +1,8 @@
-# SUSTclubs
+<div align="center">
+  <img src="SUSTclubs_logo.png" alt="SUSTclubs Logo" width="200" height="100">
+  <h1>SUSTclubs</h1>
+</div>
+
 
 SUSTclubs is a web application designed to simplify the management of club activities at SUST (Shahjalal University of Science & Technology). It's built using modern technologies like MongoDB, Express, React, and Node.js, making tasks such as club recruitment, member tracking, online payments, and other club needs much easier.
 
