@@ -11,3 +11,9 @@ SUSTclubs is a web application designed to simplify the management of club activ
 - **Event planning and reminders:** Organize events and send timely notifications.
 - **Automatic email notifications:** Stay updated with automated email alerts.
 - **Different access levels for different roles:** Control who can access what with role-based permissions.
+
+## 👥 Development Team:
+
+- **Md. Mahfuj Alam** - Registration Number: 2020331098
+- **Latifur Rahman Walid** - Registration Number: 2020331024
+- **Ahasanul Haque Sazid** - Registration Number: 2020331027
