@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="mt-auto bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.03] dark:to-transparent">
+        <footer className="mt-auto bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.03] dark:to-transparent ">
             <div className="container">
                 <div className="container flex justify-center items-center">
-                    <div className="grid gap-y-10 gap-x-4 py-14 sm:grid-cols-3 lg:grid-cols-5 lg:py-[100px]">
+                    <div className="grid gap-y-10 gap-x-4 py-14 sm:grid-cols-3 lg:grid-cols-5 lg:py-[100px] ">
                         <div>
-                            <ul className="flex flex-col gap-3 font-bold">
+                            <ul className="flex flex-col gap-3 font-bold ">
                                 <li className="mb-3 text-lg font-extrabold text-black dark:text-white">Quick Menu</li>
                                 <li>
                                     <Link to="/" className="inline-block transition hover:scale-110 hover:text-secondary">
