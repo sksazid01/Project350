@@ -19,9 +19,14 @@ const Aboutus = () => {
                 <div className="relative">
                     <div className="container">
                         <div className="items-center justify-between py-10 md:flex md:h-[400px] md:py-0">
-                            <div className="heading relative mb-0 text-center ltr:md:text-left rtl:md:text-right">
+                            <div className="heading relative mb-0 text-center ltr:md:text-left rtl:md:text-right md:w-2/3">
                                 <h6>About Us</h6>
                                 <h4 className="!text-white">About SUSTclubs</h4>
+                            </div>
+                            <div className="mt-6 md:mt-0 md:w-1/3 flex justify-center md:justify-end">
+                                <Link to="/contact-us" className="btn btn-gradient border-0 uppercase shadow-[0_10px_20px_-10px_rgba(6,182,212,0.5)] bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500 transition-all duration-200">
+                                    Contact Us
+                                </Link>
                             </div>
                         </div>
                     </div>

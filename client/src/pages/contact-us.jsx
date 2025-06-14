@@ -18,7 +18,7 @@ const Contactus = () => {
                 <div className="relative">
                     <div className="container">
                         <div className="items-center justify-between py-10 md:flex md:h-[400px] md:py-0">
-                            <div className="heading relative mb-0 text-center ltr:md:text-left rtl:md:text-right">
+                            <div className="heading relative mb-0 text-center ltr:md:text-left rtl:md:text-right md:w-2/3">
                                 <h6>Contact Us</h6>
                                 <h4 className="!text-white">Get in touch with us</h4>
                                 <ul className="mt-8 flex items-center justify-center gap-4 lg:justify-start" data-aos="fade-up" data-aos-duration="500">
@@ -175,15 +175,20 @@ const Contactus = () => {
                                     </li>
                                 </ul>
                             </div>
+                            <div className="mt-6 md:mt-0 md:w-1/3 flex justify-center md:justify-end">
+                                <Link to="/about-us" className="btn btn-gradient border-0 uppercase shadow-[0_10px_20px_-10px_rgba(6,182,212,0.5)] bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500 transition-all duration-200">
+                                    About Us
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <section className="bg-gradient-to-t from-white/[55%] to-transparent py-14 dark:bg-none lg:py-[100px]">
-                <div className="container flex justify-center items-center min-h-screen">
+            <section className="bg-gradient-to-t from-white/[55%] to-transparent py-8 dark:bg-none lg:py-12">
+                <div className="container flex justify-center items-center">
                     <div className="relative z-10 w-full max-w-3xl">
-                        <form action="" className="rounded-3xl bg-white px-4 py-12 dark:bg-gray-dark lg:px-8">
+                        <form action="" className="rounded-3xl bg-white px-4 py-8 dark:bg-gray-dark lg:px-8">
                             <div className="grid gap-10 sm:grid-cols-2">
                                 <div className="relative">
                                     <input
