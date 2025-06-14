@@ -139,6 +139,49 @@ const Aboutus = () => {
                     </div>
                 </div>
             </section>
+
+            <section className="relative overflow-x-hidden border-t-2 border-transparent py-14 dark:border-gray/20 lg:py-[100px]">
+    <div className="container">
+        <div className="relative text-center">
+            <div className="relative inline-block" data-aos="fade-down" data-aos-duration="1000">
+                <svg width="200" height="80" viewBox="0 0 200 80" className="mx-auto">
+                    <text x="50%" y="50" textAnchor="middle" className="fill-primary text-5xl font-bold italic" style={{ fontFamily: 'cursive' }}>
+                        Stay
+                    </text>
+                </svg>
+
+                <svg width="400" height="100" viewBox="0 0 400 100" className="mx-auto -mt-8">
+                    <text x="50%" y="70" textAnchor="middle" className="fill-gray-200 text-7xl font-black tracking-wider opacity-20" style={{ fontFamily: 'Arial Black, sans-serif' }}>
+                        UPDATED
+                    </text>
+                </svg>
+            </div>
+            <p className="pt-2 text-center text-lg font-bold text-gray-dark dark:text-white">
+                Enter your email address to register to our newsletter subscription delivered on a regular basis!
+            </p>
+            <form action="" className="relative z-[1] pt-[50px] text-center" data-aos="fade-up" data-aos-duration="1000">
+                <div className="relative inline-block w-full sm:w-auto">
+                    <input
+                        type="email"
+                        placeholder="Email Address"
+                        className="w-full rounded-3xl py-4 font-bold leading-5 outline-none ltr:pl-4 ltr:pr-[110px] rtl:pr-4 rtl:pl-[110px] dark:bg-gray-dark sm:w-[540px] sm:py-6 ltr:sm:pl-[30px] ltr:sm:pr-[140px] rtl:sm:pr-[30px] rtl:sm:pl-[140px]"
+                    />
+                    <button
+                        type="submit"
+                        className="absolute top-0 h-full bg-secondary px-4 font-extrabold uppercase text-white ltr:right-0 ltr:rounded-r-3xl rtl:left-0 rtl:rounded-l-3xl sm:px-7"
+                    >
+                        submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div className="absolute bottom-20 ltr:left-0 rtl:right-0">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 10 L80 90 L20 90 Z" stroke="#7780A1" strokeWidth="2" fill="none" opacity="0.1" />
+        </svg>
+    </div>
+</section>
         </div>
     );
 };
