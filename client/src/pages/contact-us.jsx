@@ -4,6 +4,7 @@ import { setPageTitle } from '../redux/themeConfigSlice';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import '../assets/css/global.css';
+import { ClubActivitiesBackground } from '../components/club_management_backgrounds';
 
 const Contactus = () => {
     const dispatch = useDispatch();
@@ -14,8 +15,9 @@ const Contactus = () => {
 
     return (
         <div className="bg-starfield text-white">
-            <div className="bg-[url(/assets/images/inner-page-hero-bg.png)] bg-cover bg-bottom bg-no-repeat pt-[82px] lg:pt-[106px]">
+            <div className="overflow-hidden pt-[82px] sm:-mx-[250px] sm:rounded-b-[50%] lg:-mx-[150px] lg:pt-[106px]">
                 <div className="relative">
+                <ClubActivitiesBackground>
                     <div className="container">
                         <div className="items-center justify-between py-10 md:flex md:h-[400px] md:py-0">
                             <div className="heading relative mb-0 text-center ltr:md:text-left rtl:md:text-right md:w-2/3">
@@ -182,6 +184,7 @@ const Contactus = () => {
                             </div>
                         </div>
                     </div>
+                </ClubActivitiesBackground>
                 </div>
             </div>
 
