@@ -15,19 +15,19 @@ const EventCard = ({ event }) => (
     <div className="space-y-4 mt-4">
       <div className="flex items-center">
         <CalendarIcon className="w-6 h-6 text-yellow-400" />
-        <p className="ml-3 text-sm font-medium text-gray-900">
+        <p className="ml-3 text-sm font-bold text-white-900">
           {new Date(event.date).toLocaleDateString()}
         </p>
       </div>
       <div className="flex items-center">
         <ClockIcon className="w-6 h-6 text-blue-500" />
-        <p className="ml-3 text-sm font-medium text-gray-900">
+        <p className="ml-3 text-sm font-bold text-white-900">
           {new Date(event.date).toLocaleTimeString()}
         </p>
       </div>
       <div className="flex items-center">
         <MapPinIcon className="w-6 h-6 text-green-500" />
-        <p className="ml-3 text-sm font-medium text-gray-900">
+        <p className="ml-3 text-sm font-bold text-white-900">
           {event.location || 'Location not specified'}
         </p>
       </div>
@@ -53,9 +53,10 @@ const EventsPage = () => {
       setLoading(true);
       setError(null);
 
-      let response = await axios.get(`${API_BASE_URL}/events/all`, {
+      let response = await axios.get(`${API_BASE_URL}/v1/events/all`, {
         headers: { Authorization: `Bearer ${token}` },
       });
+      console.log(response)
       const eventClubIds = [...new Set(response.data.map((event) => event.clubId))];
       if (!showAllEvents && user) {
         console.log(response.data);
@@ -66,7 +67,7 @@ const EventsPage = () => {
       }
 
       
-      const clubsResponse = await axios.get(`${API_BASE_URL}/clubs/club/list`, {
+      const clubsResponse = await axios.get(`${API_BASE_URL}/v1/clubs/club/list`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const clubs = clubsResponse.data;
