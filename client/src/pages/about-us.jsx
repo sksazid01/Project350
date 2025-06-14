@@ -108,6 +108,37 @@ const Aboutus = () => {
                     </div>
                 </div>
             </section>
+            <section className="py-14 lg:py-[100px]">
+                <div className="container">
+                    <div className="heading text-center">
+                        <h6>Meet Our Team</h6>
+                        <h4>Creative Minds</h4>
+                    </div>
+                    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                        <div className="group cursor-pointer text-center">
+                            <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
+                                <img src="/assets/images/md-mahfuj.png" alt="Md Mahfuj" className="h-full w-full rounded-3xl object-cover object-top" />
+                            </div>
+                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">Md Mahfuj</h4>
+                            <h6 className="text-sm font-bold">Team Member 1</h6>
+                        </div>
+                        <div className="group cursor-pointer text-center">
+                            <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
+                                <img src="/assets/images/md-ahasanul-haque-sazid.png" alt="Md Ahasanul Haque Sazid" className="h-full w-full rounded-3xl object-cover object-top" />
+                            </div>
+                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">Md Ahasanul Haque Sazid</h4>
+                            <h6 className="text-sm font-bold">Team Member 2</h6>
+                        </div>
+                        <div className="group cursor-pointer text-center">
+                            <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
+                                <img src="/assets/images/md-walid.png" alt="Md Walid" className="h-full w-full rounded-3xl object-cover object-top" />
+                            </div>
+                            <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">Md Walid</h4>
+                            <h6 className="text-sm font-bold">Team Member 3</h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
