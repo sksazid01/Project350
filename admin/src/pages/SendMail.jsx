@@ -46,18 +46,28 @@ const SendMail = () => {
       message: '',
     },
   });
-
+// Base URL for API requests
+const API_BASE_URL = 'https://backend350.vercel.app/v1';
+const token = localStorage.getItem('accessToken');
   // Fetch clubs for the dropdown
   useEffect(() => {
     const fetchClubs = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('/api/v1/clubs');
-        setClubs(response.data.results || []);
-        console.log('Clubs fetched:', response.data.results[0].id);
+        //const response = await axios.get('https://backend350.vercel.app/v1/clubs');
+        const response = await fetch(`https://backend350.vercel.app/v1/clubs`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+        const data = await response.json();
+        setClubs(data.results || []);
+        console.log('Clubs fetched:...............................', data);
       } catch (error) {
-        console.error('Error fetching clubs:', error);
-        toast.error('Failed to load clubs');
+        console.error('Error fetching clubs:...........', error);
+        toast.error('Failed to load clubs..............');
       } finally {
         setLoading(false);
       }
@@ -66,9 +76,7 @@ const SendMail = () => {
     fetchClubs();
   }, []);
 
-  // Base URL for API requests
-  const API_BASE_URL = 'https://backend350.vercel.app/v1';
-  const token = localStorage.getItem('accessToken');
+  
 
   // Update recipient count when selection changes
   useEffect(() => {
