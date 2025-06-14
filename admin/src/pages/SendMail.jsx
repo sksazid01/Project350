@@ -54,7 +54,6 @@ const token = localStorage.getItem('accessToken');
     const fetchClubs = async () => {
       try {
         setLoading(true);
-        //const response = await axios.get('https://b...content-available-to-author-only...l.app/v1/clubs');
         const response = await fetch(`https://backend350.vercel.app/v1/clubs`, {
           method: 'GET',
           headers: {
