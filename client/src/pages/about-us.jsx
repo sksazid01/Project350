@@ -4,6 +4,7 @@ import Counter from '../components/Counter';
 import { setPageTitle } from '../redux/themeConfigSlice';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import '../assets/css/global.css';
 
 const Aboutus = () => {
     const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const Aboutus = () => {
     const isRtl = useSelector((state) => state.themeConfig.rtlClass) === 'rtl' ? true : false;
 
     return (
-        <div>
+        <div className="bg-starfield text-white">
             <div className="bg-[url(/assets/images/inner-page-hero-bg.png)] bg-cover bg-bottom bg-no-repeat pt-[82px] lg:pt-[106px]">
                 <div className="relative">
                     <div className="container">

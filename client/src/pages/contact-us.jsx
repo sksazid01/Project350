@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import { setPageTitle } from '../redux/themeConfigSlice';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import '../assets/css/global.css';
+
 const Contactus = () => {
     const dispatch = useDispatch();
     useEffect(() => {
@@ -11,7 +13,7 @@ const Contactus = () => {
     const isRtl = useSelector((state) => state.themeConfig.rtlClass) === 'rtl' ? true : false;
 
     return (
-        <div>
+        <div className="bg-starfield text-white">
             <div className="bg-[url(/assets/images/inner-page-hero-bg.png)] bg-cover bg-bottom bg-no-repeat pt-[82px] lg:pt-[106px]">
                 <div className="relative">
                     <div className="container">
@@ -351,8 +353,6 @@ const Contactus = () => {
                     </div>
                 </div>
             </section>
-
-
 
             <section className="py-14 lg:py-[100px]">
                 <div className="container">
