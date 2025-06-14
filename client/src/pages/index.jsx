@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Testimonial from '../components/Testimonial';
 import CountUp from 'react-countup';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -654,6 +653,133 @@ const Marketing = () => {
                     </svg>
                 </div>
             </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <section className="py-14 lg:py-[100px]">
+  <div className="container">
+    <div className="relative z-10 lg:flex">
+      <div className="heading text-center lg:mb-0 lg:w-1/3 ltr:lg:pr-10 ltr:lg:text-left rtl:lg:pl-10 rtl:lg:text-right">
+        <h6>Get In Touch.</h6>
+        <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
+        
+        {/* Simple decorative SVG */}
+        <svg className="mx-auto mt-8" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" stroke="#B476E5" strokeWidth="2" fill="none"/>
+          <path d="M100 40 L130 80 L100 120 L70 80 Z" fill="#47BDFF" opacity="0.3"/>
+          <circle cx="100" cy="100" r="40" fill="#B476E5" opacity="0.2"/>
+        </svg>
+      </div>
+
+      <form action="" className="rounded-3xl bg-white px-4 py-12 dark:bg-[#101626] lg:w-2/3 lg:px-8">
+        <div className="grid gap-10 sm:grid-cols-2">
+          <div className="relative">
+            <input
+              type="text"
+              name="name"
+              className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+            />
+            <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
+              Full Name
+            </label>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
+              <circle cx="10" cy="6" r="4" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M3 18c0-3.5 3.5-6 7-6s7 2.5 7 6" stroke="currentColor" strokeWidth="1.5"/>
+            </svg>
+          </div>
+
+          <div className="relative">
+            <input
+              type="email"
+              name="email"
+              className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+            />
+            <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
+              Email Address
+            </label>
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
+              <rect x="1" y="2" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M1 4l9 5l9-5" stroke="currentColor" strokeWidth="1.5"/>
+            </svg>
+          </div>
+
+          <div className="relative">
+            <input
+              type="text"
+              name="mobile"
+              className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+            />
+            <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
+              Mobile Number
+            </label>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
+              <rect x="4" y="1" width="10" height="16" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+              <circle cx="9" cy="14" r="1" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <div className="relative">
+            <input
+              type="text"
+              name="city"
+              className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+            />
+            <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
+              City
+            </label>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
+              <path d="M10 2C6 2 3 5 3 9c0 5 7 9 7 9s7-4 7-9c0-4-3-7-7-7z" stroke="currentColor" strokeWidth="1.5"/>
+              <circle cx="10" cy="9" r="2" stroke="currentColor" strokeWidth="1.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <div className="relative mt-10">
+          <input
+            type="text"
+            name="message"
+            className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+          />
+          <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
+            Message
+          </label>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
+            <path d="M2 2h16v12h-8l-4 3v-3H2V2z" stroke="currentColor" strokeWidth="1.5"/>
+            <circle cx="6" cy="8" r="1" fill="currentColor"/>
+            <circle cx="10" cy="8" r="1" fill="currentColor"/>
+            <circle cx="14" cy="8" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+
+        <div className="mt-10 text-center ltr:lg:text-right rtl:lg:text-left">
+          <button type="button" className="btn bg-gray px-12 capitalize text-white dark:bg-white dark:text-black dark:hover:bg-secondary">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+            
         </div>
     );
 };
