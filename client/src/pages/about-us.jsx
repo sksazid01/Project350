@@ -86,7 +86,7 @@ const Aboutus = () => {
                                         <p className="text-sm font-semibold text-black dark:text-gray">
                                             Quickly create your club and add members.
                                         </p>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div data-aos="fade-up" data-aos-duration="1000">
@@ -97,7 +97,7 @@ const Aboutus = () => {
                                         <p className="text-sm font-semibold text-black dark:text-gray">
                                             Easily schedule and share club activities.
                                         </p>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div data-aos="fade-up" data-aos-duration="1000">
@@ -128,14 +128,14 @@ const Aboutus = () => {
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
                                     <img src="/assets/images/md-mahfuj.png" alt="Md Mahfuj" className="h-full w-full rounded-3xl object-cover object-top" />
-                                </div>
+                            </div>
                                 <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">Md Mahfuj</h4>
                                 <h6 className="text-sm font-bold">Team Member 1</h6>
                         </div>
                         <div className="group cursor-pointer text-center">
                             <div className="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
                                     <img src="/assets/images/md-ahasanul-haque-sazid.png" alt="Md Ahasanul Haque Sazid" className="h-full w-full rounded-3xl object-cover object-top" />
-                                </div>
+                            </div>
                                 <h4 className="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">Md Ahasanul Haque Sazid</h4>
                                 <h6 className="text-sm font-bold">Team Member 2</h6>
                         </div>

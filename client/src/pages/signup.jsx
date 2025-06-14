@@ -85,7 +85,7 @@ const LoginCover = () => {
         }
       );
       dispatch(signUpSuccess(res.data));
-      navigate("/otp-verification");
+      navigate("/");
     } catch (error) {
         dispatch(signUpFailure(error.response.data.message));
     } finally {
@@ -119,7 +119,7 @@ const LoginCover = () => {
       );
 
       dispatch(signUpSuccess(res.data));
-      navigate('/otp-verification');
+      navigate('/');
     } catch (error) {
       console.error('Google sign-in error:', error);
       dispatch(signUpFailure(error.response.data.message));
