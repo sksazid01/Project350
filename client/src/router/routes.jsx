@@ -16,6 +16,7 @@ const PrivacyPolicy = lazy(() => import('../pages/privacyPolicy'));
 const Test = lazy(() => import('../pages/test'));
 const Profile = lazy(() => import('../pages/profile'));
 const VerifyEmail = lazy(() => import('../pages/verify-email'));
+const OTPVerification = lazy(() => import('../pages/otp-verification'));
 //const GoogleCallback = lazy(() => import('../components/GoogleCallback'));
 
 // Private routes
@@ -34,6 +35,7 @@ const routes = [
   { path: '/', element: <Index />, layout: 'blank' },
   { path: '/login', element: <Login />, layout: 'blank' },
   { path: '/signup', element: <Signup />, layout: 'blank' },
+  { path: '/otp-verification', element: <OTPVerification />, layout: 'blank' },
   { path: '/reset-password', element: <ResetPassword />, layout: 'blank' },
   { path: '/about-us', element: <AboutUs />, layout: 'blank' },
   { path: '/contact-us', element: <ContactUs />, layout: 'blank' },
