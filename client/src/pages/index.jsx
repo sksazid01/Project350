@@ -294,12 +294,12 @@ const Marketing = () => {
 
             <section
                 className="relative overflow-hidden py-10 lg:py-20"
-    //             style={{
-    //                 background: `
-    //   radial-gradient(ellipse at top center, #fa238a33 0%, #22113a 30%),
-    //   linear-gradient(to bottom, #22113a 70%, #191132 100%)
-    // `
-    //             }}
+            //             style={{
+            //                 background: `
+            //   radial-gradient(ellipse at top center, #fa238a33 0%, #22113a 30%),
+            //   linear-gradient(to bottom, #22113a 70%, #191132 100%)
+            // `
+            //             }}
             >
                 {/* Stars overlay */}
                 <div className="pointer-events-none absolute inset-0 z-0">
@@ -310,7 +310,7 @@ const Marketing = () => {
                         <circle cx="260" cy="90" r="0.8" fill="#fff" opacity="0.75" />
                         <circle cx="210" cy="200" r="1.1" fill="#fff" opacity="0.6" />
                         <circle cx="65" cy="110" r="1.4" fill="#fff" opacity="0.5" />
-                        
+
                         {/* Add more stars if needed */}
                     </svg>
                 </div>
@@ -548,109 +548,107 @@ const Marketing = () => {
             </section>
 
 
+            <section className="py-14 lg:py-[100px]">
+                <div className="container">
+                    <div className="relative z-10 lg:flex">
+                        <div className="heading text-center lg:mb-0 lg:w-1/3 ltr:lg:pr-10 ltr:lg:text-left rtl:lg:pl-10 rtl:lg:text-right">
+                            <h6>Get In Touch.</h6>
+                            <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
 
-            <section className="relative overflow-hidden bg-black py-12 lg:py-24">
-                <div className="absolute top-0 ltr:right-0 rtl:left-0 rtl:rotate-y-180">
-                    <svg width="758" height="741" viewBox="0 0 758 741" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g opacity="0.03">
-                            <ellipse
-                                opacity="0.1"
-                                cx="752"
-                                cy="370.646"
-                                rx="750"
-                                ry="749.646"
-                                stroke="white"
-                                strokeWidth="3"
-                                strokeMiterlimit="4.62023"
-                                strokeLinecap="round"
-                                strokeDasharray="35 50 15 15"
-                            />
-                            <path
-                                opacity="0.1"
-                                d="M1443.13 370.646C1443.13 752.153 1133.7 1061.43 752 1061.43C370.296 1061.43 60.8655 752.153 60.8655 370.646C60.8655 -10.8606 370.296 -320.134 752 -320.134C1133.7 -320.134 1443.13 -10.8606 1443.13 370.646Z"
-                                stroke="white"
-                                strokeWidth="3"
-                            />
-                            <ellipse
-                                opacity="0.2"
-                                cx="752"
-                                cy="370.646"
-                                rx="634.561"
-                                ry="634.207"
-                                stroke="white"
-                                strokeWidth="3"
-                                strokeMiterlimit="4.62023"
-                                strokeLinecap="round"
-                                strokeDasharray="35 50 15 15"
-                            />
-                            <path
-                                opacity="0.3"
-                                d="M1328.4 370.646C1328.4 688.789 1070.34 946.696 752 946.696C433.66 946.696 175.596 688.789 175.596 370.646C175.596 52.5037 433.66 -205.403 752 -205.403C1070.34 -205.403 1328.4 52.5037 1328.4 370.646Z"
-                                stroke="white"
-                                strokeWidth="3"
-                            />
-                            <ellipse
-                                opacity="0.4"
-                                cx="752"
-                                cy="370.646"
-                                rx="519.83"
-                                ry="519.476"
-                                stroke="white"
-                                strokeWidth="3"
-                                strokeMiterlimit="4.62023"
-                                strokeLinecap="round"
-                                strokeDasharray="35 50 15 15"
-                            />
-                            <path
-                                opacity="0.5"
-                                d="M1211.55 370.646C1211.55 624.251 1005.8 829.84 752 829.84C498.197 829.84 292.452 624.251 292.452 370.646C292.452 117.041 498.197 -88.5479 752 -88.5479C1005.8 -88.5479 1211.55 117.041 1211.55 370.646Z"
-                                stroke="white"
-                                strokeWidth="3"
-                            />
-                            <path
-                                opacity="0.6"
-                                d="M1155.6 370.646C1155.6 593.351 974.903 773.891 752 773.891C529.097 773.891 348.401 593.351 348.401 370.646C348.401 147.942 529.097 -32.5986 752 -32.5986C974.903 -32.5986 1155.6 147.942 1155.6 370.646Z"
-                                stroke="white"
-                                strokeWidth="3"
-                            />
-                            <ellipse
-                                opacity="0.7"
-                                cx="752"
-                                cy="370.646"
-                                rx="350.567"
-                                ry="350.212"
-                                stroke="white"
-                                strokeWidth="3"
-                                strokeMiterlimit="4.62023"
-                                strokeLinecap="round"
-                                strokeDasharray="35 50 15 15"
-                            />
-                            <path
-                                opacity="0.8"
-                                d="M1040.16 370.647C1040.16 529.596 911.148 658.453 752 658.453C592.852 658.453 463.84 529.596 463.84 370.647C463.84 211.698 592.852 82.8408 752 82.8408C911.148 82.8408 1040.16 211.698 1040.16 370.647Z"
-                                stroke="white"
-                                strokeWidth="3"
-                            />
-                            <ellipse
-                                opacity="0.9"
-                                cx="752"
-                                cy="370.646"
-                                rx="223.088"
-                                ry="222.734"
-                                stroke="white"
-                                strokeWidth="3"
-                                strokeMiterlimit="4.62023"
-                                strokeLinecap="round"
-                                strokeDasharray="35 50 15 15"
-                            />
-                            <path
-                                d="M909.848 370.646C909.848 457.624 839.18 528.14 752 528.14C664.82 528.14 594.152 457.624 594.152 370.646C594.152 283.667 664.82 213.151 752 213.151C839.18 213.151 909.848 283.667 909.848 370.646Z"
-                                stroke="white"
-                                strokeWidth="3"
-                            />
-                            <ellipse cx="752" cy="370.646" rx="106.941" ry="106.586" stroke="white" strokeWidth="3" strokeMiterlimit="4.62023" strokeLinecap="round" strokeDasharray="35 50 15 15" />
-                        </g>
-                    </svg>
+                            <svg className="mx-auto mt-8" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="100" cy="100" r="80" stroke="#B476E5" strokeWidth="2" fill="none" />
+                                <path d="M100 40 L130 80 L100 120 L70 80 Z" fill="#47BDFF" opacity="0.3" />
+                                <circle cx="100" cy="100" r="40" fill="#B476E5" opacity="0.2" />
+                            </svg>
+                        </div>
+
+                        <form action="" className="rounded-3xl bg-white px-4 py-12 dark:bg-[#101626] lg:w-2/3 lg:px-8">
+                            <div className="grid gap-10 sm:grid-cols-2">
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                    />
+                                    <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
+                                        Full Name
+                                    </label>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
+                                        <circle cx="10" cy="6" r="4" stroke="currentColor" strokeWidth="1.5" />
+                                        <path d="M3 18c0-3.5 3.5-6 7-6s7 2.5 7 6" stroke="currentColor" strokeWidth="1.5" />
+                                    </svg>
+                                </div>
+
+                                <div className="relative">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                    />
+                                    <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
+                                        Email Address
+                                    </label>
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
+                                        <rect x="1" y="2" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" />
+                                        <path d="M1 4l9 5l9-5" stroke="currentColor" strokeWidth="1.5" />
+                                    </svg>
+                                </div>
+
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="mobile"
+                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                    />
+                                    <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
+                                        Mobile Number
+                                    </label>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
+                                        <rect x="4" y="1" width="10" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
+                                        <circle cx="9" cy="14" r="1" fill="currentColor" />
+                                    </svg>
+                                </div>
+
+                                <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="city"
+                                        className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                    />
+                                    <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
+                                        City
+                                    </label>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
+                                        <path d="M10 2C6 2 3 5 3 9c0 5 7 9 7 9s7-4 7-9c0-4-3-7-7-7z" stroke="currentColor" strokeWidth="1.5" />
+                                        <circle cx="10" cy="9" r="2" stroke="currentColor" strokeWidth="1.5" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div className="relative mt-10">
+                                <input
+                                    type="text"
+                                    name="message"
+                                    className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                />
+                                <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
+                                    Message
+                                </label>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
+                                    <path d="M2 2h16v12h-8l-4 3v-3H2V2z" stroke="currentColor" strokeWidth="1.5" />
+                                    <circle cx="6" cy="8" r="1" fill="currentColor" />
+                                    <circle cx="10" cy="8" r="1" fill="currentColor" />
+                                    <circle cx="14" cy="8" r="1" fill="currentColor" />
+                                </svg>
+                            </div>
+
+                            <div className="mt-10 text-center ltr:lg:text-right rtl:lg:text-left">
+                                <button type="button" className="btn bg-gray px-12 capitalize text-white dark:bg-white dark:text-black dark:hover:bg-secondary">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
 
@@ -661,125 +659,6 @@ const Marketing = () => {
 
 
 
-
-
-
-
-
-
-
-            <section className="py-14 lg:py-[100px]">
-  <div className="container">
-    <div className="relative z-10 lg:flex">
-      <div className="heading text-center lg:mb-0 lg:w-1/3 ltr:lg:pr-10 ltr:lg:text-left rtl:lg:pl-10 rtl:lg:text-right">
-        <h6>Get In Touch.</h6>
-        <h4 className="sm:!leading-[50px]">Ready to Get Started?</h4>
-        
-        {/* Simple decorative SVG */}
-        <svg className="mx-auto mt-8" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="100" r="80" stroke="#B476E5" strokeWidth="2" fill="none"/>
-          <path d="M100 40 L130 80 L100 120 L70 80 Z" fill="#47BDFF" opacity="0.3"/>
-          <circle cx="100" cy="100" r="40" fill="#B476E5" opacity="0.2"/>
-        </svg>
-      </div>
-
-      <form action="" className="rounded-3xl bg-white px-4 py-12 dark:bg-[#101626] lg:w-2/3 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-2">
-          <div className="relative">
-            <input
-              type="text"
-              name="name"
-              className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
-            />
-            <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
-              Full Name
-            </label>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
-              <circle cx="10" cy="6" r="4" stroke="currentColor" strokeWidth="1.5"/>
-              <path d="M3 18c0-3.5 3.5-6 7-6s7 2.5 7 6" stroke="currentColor" strokeWidth="1.5"/>
-            </svg>
-          </div>
-
-          <div className="relative">
-            <input
-              type="email"
-              name="email"
-              className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
-            />
-            <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
-              Email Address
-            </label>
-            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
-              <rect x="1" y="2" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.5"/>
-              <path d="M1 4l9 5l9-5" stroke="currentColor" strokeWidth="1.5"/>
-            </svg>
-          </div>
-
-          <div className="relative">
-            <input
-              type="text"
-              name="mobile"
-              className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
-            />
-            <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
-              Mobile Number
-            </label>
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
-              <rect x="4" y="1" width="10" height="16" rx="2" stroke="currentColor" strokeWidth="1.5"/>
-              <circle cx="9" cy="14" r="1" fill="currentColor"/>
-            </svg>
-          </div>
-
-          <div className="relative">
-            <input
-              type="text"
-              name="city"
-              className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
-            />
-            <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
-              City
-            </label>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
-              <path d="M10 2C6 2 3 5 3 9c0 5 7 9 7 9s7-4 7-9c0-4-3-7-7-7z" stroke="currentColor" strokeWidth="1.5"/>
-              <circle cx="10" cy="9" r="2" stroke="currentColor" strokeWidth="1.5"/>
-            </svg>
-          </div>
-        </div>
-
-        <div className="relative mt-10">
-          <input
-            type="text"
-            name="message"
-            className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
-          />
-          <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
-            Message
-          </label>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="absolute top-1/2 -translate-y-1/2 ltr:right-4 rtl:left-4 dark:text-white">
-            <path d="M2 2h16v12h-8l-4 3v-3H2V2z" stroke="currentColor" strokeWidth="1.5"/>
-            <circle cx="6" cy="8" r="1" fill="currentColor"/>
-            <circle cx="10" cy="8" r="1" fill="currentColor"/>
-            <circle cx="14" cy="8" r="1" fill="currentColor"/>
-          </svg>
-        </div>
-
-        <div className="mt-10 text-center ltr:lg:text-right rtl:lg:text-left">
-          <button type="button" className="btn bg-gray px-12 capitalize text-white dark:bg-white dark:text-black dark:hover:bg-secondary">
-            Send Message
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-            
         </div>
     );
 };
