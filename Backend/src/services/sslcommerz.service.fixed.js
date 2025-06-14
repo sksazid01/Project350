@@ -24,9 +24,11 @@ const createOrder = async (user, club) => {
     // Save the payment object to the database
     await payment.save();
     
-    // Remove any trailing slashes from serverURL
+    // Ensure server URL has no trailing slash and includes /api prefix for Vercel
     const baseUrl = config.serverURL.replace(/\/+$/, '');
-    console.log('Success URL:', `${baseUrl}/v1/sslcommerz/success/${tran_id}`);
+    const apiBaseUrl = baseUrl + (baseUrl.includes('localhost') ? '' : '/api');
+    
+    console.log('Success URL:', `${apiBaseUrl}/v1/sslcommerz/success/${tran_id}`);
 
     // Payment data for SSLCommerz
     const paymentData = {
@@ -34,11 +36,11 @@ const createOrder = async (user, club) => {
       currency: 'BDT',
       tran_id: tran_id,
       // Use server URL for callbacks to handle payment processing
-      success_url: `${baseUrl}/v1/sslcommerz/success/${tran_id}`,
-      fail_url: `${baseUrl}/v1/sslcommerz/failed/${tran_id}`,
-      cancel_url: `${baseUrl}/v1/sslcommerz/cancel/${tran_id}`,
-      // Ensure no trailing slash in client URL
-      client_url: (process.env.PAYMENT_CLIENT_URL || config.clientURL).replace(/\/+$/, ''),
+      success_url: `${apiBaseUrl}/v1/sslcommerz/success/${tran_id}`,
+      fail_url: `${apiBaseUrl}/v1/sslcommerz/failed/${tran_id}`,
+      cancel_url: `${apiBaseUrl}/v1/sslcommerz/cancel/${tran_id}`,
+      // Use PAYMENT_CLIENT_URL if available, otherwise fallback to CLIENT_URL
+      client_url: process.env.PAYMENT_CLIENT_URL || config.clientURL,
       shipping_method: 'NO',
       product_name: club.name,
       product_category: 'Club',

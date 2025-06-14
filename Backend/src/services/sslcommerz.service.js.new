@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 const Club = require('../models/club.model');
 
 const createOrder = async (user, club) => {
-  const tran_id = uuidv4();
+   const tran_id = uuidv4();
 
   try {
     // Create payment object
@@ -24,9 +24,9 @@ const createOrder = async (user, club) => {
     // Save the payment object to the database
     await payment.save();
     
-    // Remove any trailing slashes from serverURL
-    const baseUrl = config.serverURL.replace(/\/+$/, '');
-    console.log('Success URL:', `${baseUrl}/v1/sslcommerz/success/${tran_id}`);
+    // Log the payment data for debugging
+    console.log('Payment data saved with ID:', payment._id);
+    console.log('Success URL:', `${config.serverURL}/api/v1/sslcommerz/success/${tran_id}`);
 
     // Payment data for SSLCommerz
     const paymentData = {
@@ -34,11 +34,11 @@ const createOrder = async (user, club) => {
       currency: 'BDT',
       tran_id: tran_id,
       // Use server URL for callbacks to handle payment processing
-      success_url: `${baseUrl}/v1/sslcommerz/success/${tran_id}`,
-      fail_url: `${baseUrl}/v1/sslcommerz/failed/${tran_id}`,
-      cancel_url: `${baseUrl}/v1/sslcommerz/cancel/${tran_id}`,
-      // Ensure no trailing slash in client URL
-      client_url: (process.env.PAYMENT_CLIENT_URL || config.clientURL).replace(/\/+$/, ''),
+      success_url: `${config.serverURL}/api/v1/sslcommerz/success/${tran_id}`,
+      fail_url: `${config.serverURL}/api/v1/sslcommerz/failed/${tran_id}`,
+      cancel_url: `${config.serverURL}/api/v1/sslcommerz/cancel/${tran_id}`,
+      // Add client URL for frontend redirection after processing
+      client_url: config.clientURL,
       shipping_method: 'NO',
       product_name: club.name,
       product_category: 'Club',
@@ -96,42 +96,42 @@ const initPayment = async (user, club) => {
 };
 
 const validatePayment = async (val_id) => {
-  try {
-    const sslcz = new SSLCommerzPayment(
-      config.sslcommerz.storeId,
-      config.sslcommerz.storePassword,
-      config.sslcommerz.isLive,
-    );
+    try {
+        const sslcz = new SSLCommerzPayment(
+        config.sslcommerz.storeId,
+        config.sslcommerz.storePassword,
+        config.sslcommerz.isLive,
+        );
 
-    const apiResponse = await sslcz.validate({
-      val_id,
-    });
+        const apiResponse = await sslcz.validate({
+        val_id,
+        });
 
-    return apiResponse;
-  } catch (error) {
-    throw new ApiError(httpStatus.INTERNAL_SERVER_ERROR, 'Error validating payment');
-  }
+        return apiResponse;
+    } catch (error) {
+        throw new ApiError(httpStatus.INTERNAL_SERVER_ERROR, 'Error validating payment');
+    }
 };
 
 const findTransaction = async (tran_id) => {
-  const transaction = await Order.findOne({ tranId: tran_id });
-  return transaction;
+    const transaction = await Order.findOne({ tranId: tran_id });
+    return transaction;
 };
 
 const getTranByUserId = async (userId) => {
-  const transaction = await Order.findOne({ userId });
-  return transaction;
+    const transaction = await Order.findOne({ userId });
+    return transaction;
 };
 
 const getTranByClubId = async (clubId) => {
-  const club = await Club.findById(clubId);
-  if (!club) {
+   const club = await Club.findById(clubId);
+   if (!club) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Club not found');
-  }
-  const transactions = await Order.find({ clubId: club.id })
-    .populate('userId clubId')
-    .select('userName userPhone tranId amount currency paymentStatus createdAt userId clubId');
-  return transactions;
+   }
+   const transactions = await Order.find({ clubId: club.id })
+   .populate('userId clubId')
+   .select('userName userPhone tranId amount currency paymentStatus createdAt userId clubId');
+   return transactions;
 };
 
 module.exports = {
