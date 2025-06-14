@@ -47,54 +47,61 @@ const Aboutus = () => {
                     </div>
                 </div>
                 <div className="bottom-0 ltr:right-0 rtl:left-0 lg:absolute" data-aos={isRtl ? 'fade-right' : 'fade-left'} data-aos-duration="1000">
-                    <img src="/assets/images/about-bg.png" alt="SUSTclubs Development Team" className="rtl:rotate-y-180" />
                 </div>
             </section>
 
-            <section className="relative py-14 lg:py-[100px] xl:-mt-[100px]">
-                <div className="absolute top-0 z-[1] h-full w-full bg-white ltr:left-0 rtl:right-0 dark:bg-black xl:w-[85%] xl:rounded-r-[32px] flex flex-col items-center justify-center"></div>
-                <div className="absolute -top-3 hidden h-full w-full rounded-r-[32px] bg-white/50 ltr:left-3 rtl:right-3 dark:bg-gray-dark xl:inline-block xl:w-[85%]"></div>
-                <div className="container relative z-[2] ltr:xl:pr-40 rtl:xl:pl-40">
-                    <div className="lg:w-2/3">
-                        <div className="heading mb-5 text-center ltr:lg:text-left rtl:lg:text-right">
-                            <h6>How SUSTclubs Works</h6>
-                            <h4>Manage Clubs in 3 Simple Steps</h4>
+            <section className="relative py-14 lg:py-[100px] xl:-mt-[100px] flex items-center justify-center min-h-screen">
+                <div className="relative w-full max-w-[1400px] mx-auto">
+                    {/* Shadow layer - offset to the left */}
+                    <div className="absolute top-3 -left-3 hidden h-full w-full rounded-[32px] bg-white/10 dark:bg-gray-dark/50 xl:inline-block"></div>
+
+                    {/* Main white/black background */}
+                    <div className="absolute top-0 left-0 z-[1] h-full w-full bg-white dark:bg-black xl:rounded-[32px]"></div>
+
+                    {/* Content container */}
+                    <div className="container relative z-[2] mx-auto px-4 py-16">
+                        <div className="text-center mb-12">
+                            <div className="heading mb-5">
+                                <h6 className="text-primary">How SUSTclubs Works</h6>
+                                <h4 className="text-3xl font-bold">Manage Clubs in 3 Simple Steps</h4>
+                            </div>
+                            <p className="pb-10 text-lg font-semibold leading-[30px] max-w-[600px] mx-auto text-gray-500 dark:text-gray-400">
+                                SUSTclubs helps you manage clubs and get students involved easily at SUST.
+                            </p>
                         </div>
-                        <p className="pb-10 text-center text-lg font-semibold leading-[30px] ltr:lg:text-left rtl:lg:text-right">
-                            SUSTclubs helps you manage clubs and get students involved easily at SUST.
-                        </p>
-                    </div>
-                    <div className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
-                        <div data-aos="fade-up" data-aos-duration="1000">
-                            <div className="flex items-start gap-[10px] rounded-[10px] border border-transparent bg-secondary/10 py-6 px-5 transition hover:border-secondary hover:bg-transparent">
-                                <span className="flex h-[50px] w-[50px] min-w-[50px] items-center justify-center rounded-full bg-secondary text-lg text-white">01</span>
-                                <div>
-                                    <h6 className="mb-1 font-bold text-secondary">Sign Up</h6>
-                                    <p className="text-sm font-semibold text-black dark:text-gray">
-                                        Quickly create your club and add members.
-                                    </p>
+
+                        <div className="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-3 max-w-[1000px] mx-auto">
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div className="flex items-start gap-[10px] rounded-[10px] border border-transparent bg-secondary/10 py-6 px-5 transition hover:border-secondary hover:bg-transparent">
+                                    <span className="flex h-[50px] w-[50px] min-w-[50px] items-center justify-center rounded-full bg-secondary text-lg text-white">01</span>
+                                    <div>
+                                        <h6 className="mb-1 font-bold text-secondary">Sign Up</h6>
+                                        <p className="text-sm font-semibold text-black dark:text-gray">
+                                            Quickly create your club and add members.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-duration="1000">
-                            <div className="flex items-start gap-[10px] rounded-[10px] border border-transparent bg-secondary/10 py-6 px-5 transition hover:border-secondary hover:bg-transparent">
-                                <span className="flex h-[50px] w-[50px] min-w-[50px] items-center justify-center rounded-full bg-secondary text-lg text-white">02</span>
-                                <div>
-                                    <h6 className="mb-1 font-bold text-secondary">Plan Events</h6>
-                                    <p className="text-sm font-semibold text-black dark:text-gray">
-                                        Easily schedule and share club activities.
-                                    </p>
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div className="flex items-start gap-[10px] rounded-[10px] border border-transparent bg-secondary/10 py-6 px-5 transition hover:border-secondary hover:bg-transparent">
+                                    <span className="flex h-[50px] w-[50px] min-w-[50px] items-center justify-center rounded-full bg-secondary text-lg text-white">02</span>
+                                    <div>
+                                        <h6 className="mb-1 font-bold text-secondary">Plan Events</h6>
+                                        <p className="text-sm font-semibold text-black dark:text-gray">
+                                            Easily schedule and share club activities.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div data-aos="fade-up" data-aos-duration="1000">
-                            <div className="flex items-start gap-[10px] rounded-[10px] border border-transparent bg-secondary/10 py-6 px-5 transition hover:border-secondary hover:bg-transparent">
-                                <span className="flex h-[50px] w-[50px] min-w-[50px] items-center justify-center rounded-full bg-secondary text-lg text-white">03</span>
-                                <div>
-                                    <h6 className="mb-1 font-bold text-secondary">Track Engagement</h6>
-                                    <p className="text-sm font-semibold text-black dark:text-gray">
-                                        See how active members are and how events perform.
-                                    </p>
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div className="flex items-start gap-[10px] rounded-[10px] border border-transparent bg-secondary/10 py-6 px-5 transition hover:border-secondary hover:bg-transparent">
+                                    <span className="flex h-[50px] w-[50px] min-w-[50px] items-center justify-center rounded-full bg-secondary text-lg text-white">03</span>
+                                    <div>
+                                        <h6 className="mb-1 font-bold text-secondary">Track Engagement</h6>
+                                        <p className="text-sm font-semibold text-black dark:text-gray">
+                                            See how active members are and how events perform.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
