@@ -211,16 +211,7 @@ export default function TransactionTable() {
           <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
             <h1 className="text-2xl font-bold mb-4 sm:mb-0"> {clubName} Transactions</h1>
             <div className="flex space-x-2">
-              <Tooltip label="Download">
-                <Button color="blue">
-                  Download
-                </Button>
-              </Tooltip>
-              <Tooltip label="Print">
-                <Button color="green">
-                  Print
-                </Button>
-              </Tooltip>
+              
             </div>
           </div>
           
