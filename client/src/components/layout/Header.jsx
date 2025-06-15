@@ -203,18 +203,18 @@ const Header = () => {
                                             Profile
                                         </Link>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <Link to="/apps/mailbox" className="dark:hover:text-white">
                                             <IconMail className="w-4.5 h-4.5 ltr:mr-2 rtl:ml-2 shrink-0" />
                                             Inbox
                                         </Link>
-                                    </li>
-                                    <li>
+                                    </li> */}
+                                    {/* <li>
                                         <Link to="/auth/boxed-lockscreen" className="dark:hover:text-white">
                                             <IconLockDots className="w-4.5 h-4.5 ltr:mr-2 rtl:ml-2 shrink-0" />
                                             Lock Screen
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     <li className="border-t border-white-light dark:border-white-light/10">
                                         <button className="text-danger !py-3" onClick={handleSignOut}>
                                             <IconLogout className="w-4.5 h-4.5 ltr:mr-2 rtl:ml-2 rotate-90 shrink-0" />
@@ -267,15 +267,15 @@ const Header = () => {
                                 <li>
                                     <NavLink to="/apps/chat">{t('chat')}</NavLink>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <NavLink to="/apps/mailbox">{t('mailbox')}</NavLink>
-                                </li>
+                                </li> */}
                                 <li>
                                     <NavLink to="/apps/todolist">{t('todo_list')}</NavLink>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <NavLink to="/apps/notes">{t('notes')}</NavLink>
-                                </li>
+                                </li> */}
                                 <li>
                                     <NavLink to="/apps/scrumboard">{t('scrumboard')}</NavLink>
                                 </li>
@@ -304,9 +304,9 @@ const Header = () => {
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <NavLink to="/apps/calendar">{t('calendar')}</NavLink>
-                                </li>
+                                </li> */}
                             </ul>
                         </li>
                         <li className="menu nav-item relative">

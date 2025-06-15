@@ -10,13 +10,58 @@ import { setPageTitle } from '../redux/themeConfigSlice';
 import { useDispatch } from 'react-redux';
 import { ClubActivitiesBackground } from '../components/club_management_backgrounds';
 import '../assets/css/global.css'
+import axios from 'axios';
 
 const Marketing = () => {
     const dispatch = useDispatch();
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        mobile: '',
+        city: '',
+        message: ''
+    });
     useEffect(() => {
         dispatch(setPageTitle('SUSTclubs'));
     }, [dispatch]);
     const isRtl = useSelector((state) => state.themeConfig.direction) === 'rtl' ? true : false;
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    async function onSubmit(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const data = {
+            service_id: "service_8ueqohp",
+            template_id: "template_35e94ua",
+            user_id: "V5nPVm2-HwEJNb5AG",
+            template_params: {
+                from_name: formData.name,
+                from_email: formData.email,
+                to_name: "The Development Team",
+                message: `Message: ${formData.message} \nEmail: ${formData.email} \nPhone: ${formData.mobile}`,
+            },
+        };
+
+        try {
+            const res = await axios.post(
+                "https://api.emailjs.com/api/v1.0/email/send",
+                data
+            );
+            alert("Message sent successfully!");
+            setFormData({ name: '', email: '', mobile: '', city: '', message: '' });
+        } catch (error) {
+            alert("Send Fail");
+            console.error(error);
+        }
+    }
 
     return (
         <div className="bg-starfield text-white">
@@ -576,12 +621,14 @@ const Marketing = () => {
                             </svg>
                         </div>
 
-                        <form action="" className="rounded-3xl bg-white px-4 py-12 dark:bg-[#101626] lg:w-2/3 lg:px-8">
+                        <form onSubmit={onSubmit} className="rounded-3xl bg-white px-4 py-12 dark:bg-[#101626] lg:w-2/3 lg:px-8">
                             <div className="grid gap-10 sm:grid-cols-2">
                                 <div className="relative">
                                     <input
                                         type="text"
                                         name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
                                         className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                                     />
                                     <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
@@ -597,6 +644,8 @@ const Marketing = () => {
                                     <input
                                         type="email"
                                         name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
                                         className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                                     />
                                     <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
@@ -612,6 +661,8 @@ const Marketing = () => {
                                     <input
                                         type="text"
                                         name="mobile"
+                                        value={formData.mobile}
+                                        onChange={handleChange}
                                         className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                                     />
                                     <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
@@ -627,6 +678,8 @@ const Marketing = () => {
                                     <input
                                         type="text"
                                         name="city"
+                                        value={formData.city}
+                                        onChange={handleChange}
                                         className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                                     />
                                     <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
@@ -643,6 +696,8 @@ const Marketing = () => {
                                 <input
                                     type="text"
                                     name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     className="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
                                 />
                                 <label className="absolute -top-3 bg-white px-2 font-bold ltr:left-6 rtl:right-6 dark:bg-[#101626] dark:text-white">
@@ -657,7 +712,7 @@ const Marketing = () => {
                             </div>
 
                             <div className="mt-10 text-center ltr:lg:text-right rtl:lg:text-left">
-                                <button type="button" className="btn bg-gray px-12 capitalize text-white dark:bg-white dark:text-black dark:hover:bg-secondary">
+                                <button type="submit" className="btn bg-gray px-12 capitalize text-white dark:bg-white dark:text-black dark:hover:bg-secondary">
                                     Send Message
                                 </button>
                             </div>

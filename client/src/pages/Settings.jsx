@@ -446,12 +446,12 @@ const AccountSetting = () => {
                     </label>
                   </div>
 
-                  <label className="inline-flex cursor-pointer">
+                  {/* <label className="inline-flex cursor-pointer">
                     <input className="form-radio ltr:mr-4 rtl:ml-4 cursor-pointer" type="radio" name="flexRadioDefault" />
                     <span>
                       <img className="ms-3" width="100" height="68" alt="settings-light" src="/assets/images/settings-dark.svg" />
                     </span>
-                  </label>
+                  </label> */}
                 </div>
               </div>
               <div className="panel space-y-5">
