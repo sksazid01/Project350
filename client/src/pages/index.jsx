@@ -93,121 +93,121 @@ const Marketing = () => {
                 </div>
             </div>
 
-           
+
             <section className="py-12 dark:bg-starfield md:py-20">
-  <div className="container">
-    <div className="heading text-center">
-      <h4>Platform Solutions</h4>
-    </div>
-    <div
-      className="mt-24 grid grid-cols-1 gap-7 text-black ltr:text-right rtl:text-left sm:grid-cols-2 lg:grid-cols-3"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
-      {/* Card 1 */}
-      <div className="relative flex flex-col items-center">
-        <Link
-          to="#"
-          className="absolute -top-[54px] flex h-[108px] w-[108px] items-center justify-center rounded-full bg-secondary text-white shadow-[0_15px_30px_rgba(180,118,229,0.4)] group-hover:bg-black group-hover:shadow-[0_15px_30px_rgba(199,55,253,0.4)]"
-          style={{ zIndex: 2 }}
-        >
-          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M26 4.33301C14.8417 4.33301 5.75 13.4247 5.75 24.583C5.75 35.7413 14.8417 44.833 26 44.833C37.1583 44.833 46.25 35.7413 46.25 24.583C46.25 13.4247 37.1583 4.33301 26 4.33301Z"
-              fill="currentColor"
-              opacity="0.4"
-            />
-            <path
-              d="M26 16.25C23.1 16.25 20.75 18.6 20.75 21.5C20.75 24.4 23.1 26.75 26 26.75C28.9 26.75 31.25 24.4 31.25 21.5C31.25 18.6 28.9 16.25 26 16.25Z"
-              fill="currentColor"
-            />
-            <path
-              d="M35.75 36.5C35.75 32.0817 31.3317 28.5 26 28.5C20.6683 28.5 16.25 32.0817 16.25 36.5"
-              fill="currentColor"
-            />
-          </svg>
-        </Link>
-        <div className="group relative flex flex-col items-center rounded-3xl border-2 border-transparent bg-white p-6 shadow-[-20px_30px_70px_rgba(219,222,225,0.4)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary w-full mt-[54px]">
-          <h3 className="text-[22px] font-extrabold dark:text-white dark:group-hover:text-black text-center">Member Management</h3>
-          <p className="text-lg mt-4 font-semibold text-gray dark:group-hover:text-black text-center">
-            Effortlessly manage club members with our integrated system. Track attendance, assign roles, and maintain member profiles all in one place.
-          </p>
-        </div>
-      </div>
+                <div className="container">
+                    <div className="heading text-center">
+                        <h4>Platform Solutions</h4>
+                    </div>
+                    <div
+                        className="mt-24 grid grid-cols-1 gap-7 text-black ltr:text-right rtl:text-left sm:grid-cols-2 lg:grid-cols-3"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
+                        {/* Card 1 */}
+                        <div className="relative flex flex-col items-center">
+                            <Link
+                                to="#"
+                                className="absolute -top-[54px] flex h-[108px] w-[108px] items-center justify-center rounded-full bg-secondary text-white shadow-[0_15px_30px_rgba(180,118,229,0.4)] group-hover:bg-black group-hover:shadow-[0_15px_30px_rgba(199,55,253,0.4)]"
+                                style={{ zIndex: 2 }}
+                            >
+                                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M26 4.33301C14.8417 4.33301 5.75 13.4247 5.75 24.583C5.75 35.7413 14.8417 44.833 26 44.833C37.1583 44.833 46.25 35.7413 46.25 24.583C46.25 13.4247 37.1583 4.33301 26 4.33301Z"
+                                        fill="currentColor"
+                                        opacity="0.4"
+                                    />
+                                    <path
+                                        d="M26 16.25C23.1 16.25 20.75 18.6 20.75 21.5C20.75 24.4 23.1 26.75 26 26.75C28.9 26.75 31.25 24.4 31.25 21.5C31.25 18.6 28.9 16.25 26 16.25Z"
+                                        fill="currentColor"
+                                    />
+                                    <path
+                                        d="M35.75 36.5C35.75 32.0817 31.3317 28.5 26 28.5C20.6683 28.5 16.25 32.0817 16.25 36.5"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </Link>
+                            <div className="group relative flex flex-col items-center rounded-3xl border-2 border-transparent bg-white p-6 shadow-[-20px_30px_70px_rgba(219,222,225,0.4)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary w-full mt-[54px]">
+                                <h3 className="text-[22px] font-extrabold dark:text-white dark:group-hover:text-black text-center">Member Management</h3>
+                                <p className="text-lg mt-4 font-semibold text-gray dark:group-hover:text-black text-center">
+                                    Effortlessly manage club members with our integrated system. Track attendance, assign roles, and maintain member profiles all in one place.
+                                </p>
+                            </div>
+                        </div>
 
-      {/* Card 2 */}
-      <div className="relative flex flex-col items-center">
-        <Link
-          to="#"
-          className="absolute -top-[54px] flex h-[108px] w-[108px] items-center justify-center rounded-full bg-secondary text-white shadow-[0_15px_30px_rgba(180,118,229,0.4)] group-hover:bg-black group-hover:shadow-[0_15px_30px_rgba(199,55,253,0.4)]"
-          style={{ zIndex: 2 }}
-        >
-          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              opacity="0.4"
-              d="M39 6.5H13C8.85786 6.5 5.5 9.85786 5.5 14V31C5.5 35.1421 8.85786 38.5 13 38.5H39C43.1421 38.5 46.5 35.1421 46.5 31V14C46.5 9.85786 43.1421 6.5 39 6.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M39 38.5H13C8.85786 38.5 5.5 35.1421 5.5 31V38C5.5 42.1421 8.85786 45.5 13 45.5H39C43.1421 45.5 46.5 42.1421 46.5 38V31C46.5 35.1421 43.1421 38.5 39 38.5Z"
-              fill="currentColor"
-            />
-            <path
-              d="M16 17.5H21M16 23.5H30M16 29.5H36"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-        </Link>
-        <div className="group relative flex flex-col items-center rounded-3xl border-2 border-transparent bg-white p-6 shadow-[-20px_30px_70px_rgba(219,222,225,0.4)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary w-full mt-[54px]">
-          <h3 className="text-[22px] font-extrabold dark:text-white dark:group-hover:text-black text-center">Event Coordination</h3>
-          <p className="text-lg mt-4 font-semibold text-gray dark:group-hover:text-black text-center">
-            Plan and coordinate club events seamlessly. Create event calendars, manage registrations, and track participation with our comprehensive tools.
-          </p>
-        </div>
-      </div>
+                        {/* Card 2 */}
+                        <div className="relative flex flex-col items-center">
+                            <Link
+                                to="#"
+                                className="absolute -top-[54px] flex h-[108px] w-[108px] items-center justify-center rounded-full bg-secondary text-white shadow-[0_15px_30px_rgba(180,118,229,0.4)] group-hover:bg-black group-hover:shadow-[0_15px_30px_rgba(199,55,253,0.4)]"
+                                style={{ zIndex: 2 }}
+                            >
+                                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        opacity="0.4"
+                                        d="M39 6.5H13C8.85786 6.5 5.5 9.85786 5.5 14V31C5.5 35.1421 8.85786 38.5 13 38.5H39C43.1421 38.5 46.5 35.1421 46.5 31V14C46.5 9.85786 43.1421 6.5 39 6.5Z"
+                                        fill="currentColor"
+                                    />
+                                    <path
+                                        d="M39 38.5H13C8.85786 38.5 5.5 35.1421 5.5 31V38C5.5 42.1421 8.85786 45.5 13 45.5H39C43.1421 45.5 46.5 42.1421 46.5 38V31C46.5 35.1421 43.1421 38.5 39 38.5Z"
+                                        fill="currentColor"
+                                    />
+                                    <path
+                                        d="M16 17.5H21M16 23.5H30M16 29.5H36"
+                                        stroke="white"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                    />
+                                </svg>
+                            </Link>
+                            <div className="group relative flex flex-col items-center rounded-3xl border-2 border-transparent bg-white p-6 shadow-[-20px_30px_70px_rgba(219,222,225,0.4)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary w-full mt-[54px]">
+                                <h3 className="text-[22px] font-extrabold dark:text-white dark:group-hover:text-black text-center">Event Coordination</h3>
+                                <p className="text-lg mt-4 font-semibold text-gray dark:group-hover:text-black text-center">
+                                    Plan and coordinate club events seamlessly. Create event calendars, manage registrations, and track participation with our comprehensive tools.
+                                </p>
+                            </div>
+                        </div>
 
-      {/* Card 3 */}
-      <div className="relative flex flex-col items-center">
-        <Link
-          to="#"
-          className="absolute -top-[54px] flex h-[108px] w-[108px] items-center justify-center rounded-full bg-secondary text-white shadow-[0_15px_30px_rgba(180,118,229,0.4)] group-hover:bg-black group-hover:shadow-[0_15px_30px_rgba(199,55,253,0.4)]"
-          style={{ zIndex: 2 }}
-        >
-          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              opacity="0.4"
-              d="M26 46.25C37.1797 46.25 46.25 37.1797 46.25 26C46.25 14.8203 37.1797 5.75 26 5.75C14.8203 5.75 5.75 14.8203 5.75 26C5.75 37.1797 14.8203 46.25 26 46.25Z"
-              fill="currentColor"
-            />
-            <path
-              d="M26 13V26L34 34"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M20 6H32M20 46H32"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-        </Link>
-        <div className="group relative flex flex-col items-center rounded-3xl border-2 border-transparent bg-white p-6 shadow-[-20px_30px_70px_rgba(219,222,225,0.4)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary w-full mt-[54px]">
-          <h3 className="text-[22px] font-extrabold dark:text-white dark:group-hover:text-black text-center">Activity Tracking</h3>
-          <p className="text-lg mt-4 font-semibold text-gray dark:group-hover:text-black text-center">
-            Monitor club activities and progress in real-time. Generate reports, track goals, and showcase your club's achievements to the university community.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+                        {/* Card 3 */}
+                        <div className="relative flex flex-col items-center">
+                            <Link
+                                to="#"
+                                className="absolute -top-[54px] flex h-[108px] w-[108px] items-center justify-center rounded-full bg-secondary text-white shadow-[0_15px_30px_rgba(180,118,229,0.4)] group-hover:bg-black group-hover:shadow-[0_15px_30px_rgba(199,55,253,0.4)]"
+                                style={{ zIndex: 2 }}
+                            >
+                                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        opacity="0.4"
+                                        d="M26 46.25C37.1797 46.25 46.25 37.1797 46.25 26C46.25 14.8203 37.1797 5.75 26 5.75C14.8203 5.75 5.75 14.8203 5.75 26C5.75 37.1797 14.8203 46.25 26 46.25Z"
+                                        fill="currentColor"
+                                    />
+                                    <path
+                                        d="M26 13V26L34 34"
+                                        stroke="white"
+                                        strokeWidth="3"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                    <path
+                                        d="M20 6H32M20 46H32"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                    />
+                                </svg>
+                            </Link>
+                            <div className="group relative flex flex-col items-center rounded-3xl border-2 border-transparent bg-white p-6 shadow-[-20px_30px_70px_rgba(219,222,225,0.4)] transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary w-full mt-[54px]">
+                                <h3 className="text-[22px] font-extrabold dark:text-white dark:group-hover:text-black text-center">Activity Tracking</h3>
+                                <p className="text-lg mt-4 font-semibold text-gray dark:group-hover:text-black text-center">
+                                    Monitor club activities and progress in real-time. Generate reports, track goals, and showcase your club's achievements to the university community.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            
+
 
             <section className="py-14 lg:py-[100px]">
                 <div className="container relative">
@@ -561,33 +561,22 @@ const Marketing = () => {
                             <span className="absolute inset-x-0 -top-5">
                                 <img src="/assets/images/marketing/team-shadow.svg" className="mx-auto" alt="" />
                             </span>
-                            <div className="mx-auto w-48 rounded-full">
-                                <img src="/assets/images/demoMember.svg" alt="" /> {/* Image source updated */}
+                            <div className="mx-auto w-48 h-48 overflow-hidden rounded-full">
+                                <img src="/assets/images/mahfuj.jpg" alt="/assets/images/demoMember.svg" className="rounded-full" />
                             </div>
-                            <h3 className="mt-2 text-xl font-extrabold text-black dark:text-white">project-350</h3> {/* Name updated */}
-                            <p className="mt-2.5 text-sm font-semibold">developer</p> {/* Title updated */}
+                            <h3 className="mt-2 text-xl font-extrabold text-black dark:text-white">Md Mahfuj Alam</h3>
+                            <p className="mt-2.5 text-sm font-semibold">Developer</p>
                         </SwiperSlide>
 
                         <SwiperSlide className="relative text-center">
                             <span className="absolute inset-x-0 -top-5">
                                 <img src="/assets/images/marketing/team-shadow1.svg" className="mx-auto" alt="" />
                             </span>
-                            <div className="mx-auto w-48 rounded-full">
-                                <img src="/assets/images/demoMember.svg" alt="" /> {/* Image source updated */}
+                            <div className="mx-auto w-48 h-48 overflow-hidden rounded-full">
+                                <img src="/assets/images/sk.jpg" alt="/assets/images/demoMember.svg" className="rounded-full" />
                             </div>
-                            <h3 className="mt-2 text-xl font-extrabold text-black dark:text-white">project-350</h3> {/* Name updated */}
-                            <p className="mt-2.5 text-sm font-semibold">developer</p> {/* Title updated */}
-                        </SwiperSlide>
-
-                        <SwiperSlide className="relative text-center">
-                            <span className="absolute inset-x-0 -top-5">
-                                <img src="/assets/images/marketing/team-shadow.svg" className="mx-auto" alt="" />
-                            </span>
-                            <div className="mx-auto w-48 rounded-full">
-                                <img src="/assets/images/demoMember.svg" alt="" /> {/* Image source updated */}
-                            </div>
-                            <h3 className="mt-2 text-xl font-extrabold text-black dark:text-white">project-350</h3> {/* Name updated */}
-                            <p className="mt-2.5 text-sm font-semibold">developer</p> {/* Title updated */}
+                            <h3 className="mt-2 text-xl font-extrabold text-black dark:text-white">Md Ahasanul Haque Sazid</h3>
+                            <p className="mt-2.5 text-sm font-semibold">Developer</p>
                         </SwiperSlide>
 
                         <SwiperSlide className="relative text-center">
@@ -595,17 +584,17 @@ const Marketing = () => {
                                 <span className="absolute inset-x-0 -top-5">
                                     <img src="/assets/images/marketing/team-shadow1.svg" className="mx-auto" alt="" />
                                 </span>
-                                <div className="mx-auto w-48 rounded-full">
-                                    <img src="/assets/images/demoMember.svg" alt="" /> {/* Image source updated */}
+                                <div className="mx-auto w-48 h-48 overflow-hidden rounded-full">
+                                    <img src="/assets/images/walid.jpg" alt="/assets/images/demoMember.svg" className="rounded-full" />
                                 </div>
-                                <h3 className="mt-2 text-xl font-extrabold text-black dark:text-white">project-350</h3> {/* Name updated */}
-                                <p className="mt-2.5 text-sm font-semibold">developer</p> {/* Title updated */}
+                                <h3 className="mt-2 text-xl font-extrabold text-black dark:text-white">Md Latifur Rahman Walid</h3>
+                                <p className="mt-2.5 text-sm font-semibold">Developer</p>
                             </div>
                         </SwiperSlide>
+
                     </Swiper>
                 </div>
             </section>
-
 
             <section className="py-14 lg:py-[100px]">
                 <div className="container">
